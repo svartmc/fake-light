@@ -20,13 +20,13 @@ function fakeLight( mesh ) {
 
 	for ( var i = 0; i < count; i ++ ) {
 
-		var norms = normals.getX( i ) + normals.getZ( i ) / 4 + normals.getY( i ) * 1.2;
+		var greyFactor = normals.getX( i ) + normals.getZ( i ) / 4 + normals.getY( i ) * 1.2;
 
 		var posX = positions.getX( i );
 		var posY = positions.getY( i );
 		var posZ = positions.getZ( i );
 
-		colors.setXYZ( i, greyValue.r + norms/20, greyValue.g + norms/20, greyValue.b + norms/20 );
+		colors.setXYZ( i, greyValue.r + greyFactor / 20, greyValue.g + greyFactor / 20, greyValue.b + greyFactor / 20 );
 
 	}
 
